@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="162dp"
+        android:layout_alignParentTop="true"
+        android:background="#fff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true">
+
+
+            <TextView
+                android:id="@+id/tv_draewer_doc_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Hello Dr.Amar Sigh"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#0694d1" />
+
+            <ImageView
+                android:id="@+id/iv_doc"
+                android:layout_width="60dip"
+                android:layout_height="60dip"
+                android:layout_below="@+id/tv_draewer_doc_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/userpic"></ImageView>
+
+
+            <RelativeLayout
+                android:id="@+id/logout_rl"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/iv_doc"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/logout"
+                    android:src="@drawable/logout" />
+
+                <TextView
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="center"
+                    android:text="Logout"
+                    android:textColor="#f18e3a"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/custom_webview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_header_container"
+        android:background="@android:color/white">
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20sp"
+            android:background="#A9A9A9"></View>
+
+        <com.example.insys.oneibory.Utility.CustomTextView
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:text="Home"
+            android:textAllCaps="true"
+            android:textColor="#3e3e3e"
+            android:textSize="16sp" />
+
+
+        <com.example.insys.oneibory.Utility.CustomTextView
+            android:id="@+id/categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="18dp"
+            android:background="@android:color/white"
+            android:text="Categories"
+            android:textAllCaps="true"
+            android:textColor="#3e3e3e"
+            android:textSize="16sp" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/drawerList"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categories"
+            android:layout_weight="1" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

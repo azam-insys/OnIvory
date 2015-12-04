@@ -1,0 +1,352 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical"
+    tools:context="om.example.insys.oneibory.fragments.HomeFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/doc_profile_lay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9">
+
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:lines="2"
+            android:padding="30dp"
+            android:text="@string/welcometext"
+            android:textColor="#000000"
+            android:textSize="30sp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/rouded_corner"
+                android:drawableLeft="@drawable/cpass"
+                android:drawablePadding="10dp"
+                android:hint="Search"
+                android:paddingLeft="20dp"
+                android:paddingRight="50dp"
+                android:singleLine="true"
+                android:textColorHint="#cdccd2"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/rounded_button"
+                android:text="Go" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#eeeeee"
+        android:layout_below="@+id/doc_profile_lay"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1.1">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/pre"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.example.insys.oneibory.Utility.CustomTextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="Categories"
+                    android:textAllCaps="true"
+                    android:textColor="#d56f14"
+                    android:textSize="18sp"></com.example.insys.oneibory.Utility.CustomTextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/text"
+                    android:layout_marginTop="10dp"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <com.example.insys.oneibory.horizontal.CenterLockHorizontalScrollview
+                        android:id="@+id/scrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:scrollbarAlwaysDrawHorizontalTrack="false"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"></LinearLayout>
+                    </com.example.insys.oneibory.horizontal.CenterLockHorizontalScrollview>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/deal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pre"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.example.insys.oneibory.Utility.CustomTextView
+                    android:id="@+id/text1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="RECENTLY VIEWeD products"
+                    android:textAllCaps="true"
+                    android:textColor="#1c68a2"
+                    android:textSize="16sp"></com.example.insys.oneibory.Utility.CustomTextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/text1"
+                    android:layout_marginTop="10dp"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <com.example.insys.oneibory.horizontal.CenterLockHorizontalScrollview
+                        android:id="@+id/scrollView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"></LinearLayout>
+                    </com.example.insys.oneibory.horizontal.CenterLockHorizontalScrollview>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/pending"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <com.example.insys.oneibory.Utility.CustomTextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="View Past Orders"
+                    android:textAllCaps="true"
+                    android:textColor="#1c68a2"
+                    android:textSize="18sp"></com.example.insys.oneibory.Utility.CustomTextView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="view all"
+                    android:textColor="#606468"
+                    android:textSize="16sp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/text2"
+                    android:layout_marginTop="10dp"
+                    android:background="#fff">
+
+
+                    <TextView
+                        android:id="@+id/tv_pastOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Order Id:"
+                        android:textColor="#1c68a2"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@+id/tv_pastOrder"
+                        android:text="#3367AD"
+                        android:textColor="#f6841f"
+                        android:textSize="16sp"/>
+
+                    <TextView
+
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_pastOrder"
+                        android:layout_alignLeft="@+id/tv_pastOrder"
+                        android:text="Date:"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#1c68a2"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_date"
+                        android:text="30/11/2015"
+                        android:layout_marginLeft="5dp"
+                        android:layout_below="@+id/tv_pastOrder"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#f6841f"
+                        android:textSize="16sp"/>
+
+
+
+                    <Button
+                        android:id="@+id/btn_reorder"
+                        android:layout_width="100dp"
+                        android:layout_alignParentRight="true"
+                        android:text="Reorder"
+                        android:layout_marginTop="20dp"
+                        android:textColor="#fff"
+                        android:typeface="sans"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rounded_button"
+                        android:layout_height="wrap_content" />
+
+                    <com.example.insys.oneibory.horizontal.CenterLockHorizontalScrollview
+                        android:id="@+id/scrollView2"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/btn_reorder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"></LinearLayout>
+                    </com.example.insys.oneibory.horizontal.CenterLockHorizontalScrollview>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/pending"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="vertical"-->
+            <!--android:visibility="visible">-->
+
+            <!--<com.example.insys.oneibory.Utility.CustomTextView-->
+            <!--android:id="@+id/text3"-->
+
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp"-->
+
+            <!--android:gravity="center_vertical"-->
+            <!--android:padding="5dp"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:text="RECENTLY VIEWD ITEMS"-->
+            <!--android:textAllCaps="true"-->
+            <!--android:textColor="#0d6ca6"-->
+            <!--android:textSize="18sp"></com.example.insys.oneibory.Utility.CustomTextView>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_below="@+id/text3"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<com.example.insys.oneibory.horizontal.CenterLockHorizontalScrollview-->
+            <!--android:id="@+id/scrollView3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"></LinearLayout>-->
+            <!--</com.example.insys.oneibory.horizontal.CenterLockHorizontalScrollview>-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--</RelativeLayout>-->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#43a8ec"
+        android:gravity="center_horizontal|center"
+        android:text="Reach us on 011-23645031"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+</LinearLayout>

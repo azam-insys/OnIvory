@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">OneIvory</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+
+    <string-array name="tabs">
+        <item>TAB 1</item>
+        <item>TAB 2</item>
+        <item>TAB 3</item>
+        <item>TAB 4</item>
+        <item>TAB 5</item>
+        <item>TAB 6</item>
+    </string-array>
+
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>Equiments</item>
+        <item>General Dentistry</item>
+        <item>Endodontics</item>
+        <item>Prosthodontics</item>
+        <item>Periodontics</item>
+        <item>Pedodontics</item>
+        <item>Restorative Dentistry</item>
+        <item>Oral Surgery</item>
+        <item>Orthodontics</item>
+    </string-array>
+
+   <string name="welcometext">Hi,What would you\n like to buy ? </string>
+</resources>
